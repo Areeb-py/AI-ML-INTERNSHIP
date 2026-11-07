@@ -1,0 +1,5 @@
+model,clusters,noise_points,silhouette
+KMeans,3,0,0.22918744863471965
+Agglomerative,3,0,0.28501377070693756
+GaussianMixture,3,0,0.11183199805189266
+DBSCAN,2,1949,
