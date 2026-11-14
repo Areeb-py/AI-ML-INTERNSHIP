@@ -1,106 +1,68 @@
-\# Week 03 – Tree-Based Models \& Feature Engineering
+\# Week 02 – Supervised Machine Learning
 
 
 
 \## Overview
 
-This week focused on tree-based machine learning algorithms, feature engineering, model optimization, and building more structured machine learning pipelines.
-
-
-
-The objective was to improve model performance and understand how different algorithms handle real-world datasets.
+This week focused on understanding and implementing supervised machine learning algorithms. The main objective was to learn how models use labelled data to make predictions and how their performance can be evaluated.
 
 
 
 \## Topics Covered
 
-\- Decision Tree algorithms.
+\- Introduction to supervised machine learning.
 
-\- Random Forest.
+\- Regression and classification.
 
-\- Ensemble Learning.
+\- Training and testing datasets.
 
-\- Gradient Boosting.
+\- Train-test splitting and cross-validation.
 
-\- XGBoost.
+\- Decision Tree Classifier.
 
-\- LightGBM.
+\- Logistic Regression and other classification techniques.
 
-\- Feature Engineering.
+\- Model evaluation metrics:
 
-\- Categorical Feature Encoding.
+&#x20; - Accuracy
 
-\- Feature Scaling.
+&#x20; - Precision
 
-\- Feature Selection.
+&#x20; - Recall
 
-\- Scikit-learn Pipelines.
+&#x20; - F1-score
 
-\- Hyperparameter Tuning.
+&#x20; - Confusion Matrix
 
-\- Model Comparison and Evaluation.
+&#x20; - ROC-AUC
 
+\- Understanding overfitting and underfitting.
 
+\- Bias-variance trade-off.
 
-\## Practical Project – Bank Customer Churn Prediction
-
-
-
-Developed a machine learning project to predict whether a bank customer is likely to leave the bank.
+\- Feature encoding and preprocessing.
 
 
 
-\### Project Workflow
+\## Practical Work
 
-1\. Dataset loading and inspection.
-
-2\. Exploratory Data Analysis (EDA).
-
-3\. Data cleaning and preprocessing.
-
-4\. Removing irrelevant columns.
-
-5\. Encoding categorical variables.
-
-6\. Splitting the dataset into training and testing sets.
-
-7\. Training multiple classification algorithms.
-
-8\. Comparing model performance.
-
-9\. Evaluating models using accuracy and ROC-AUC.
-
-10\. Analyzing feature importance.
+Worked with machine learning datasets to understand the complete model-training workflow.
 
 
 
-\### Models Implemented
+Implemented classification models using Scikit-learn and practiced:
 
-\- Random Forest
+\- Preparing datasets.
 
-\- XGBoost
+\- Separating features and target variables.
 
-\- LightGBM
+\- Splitting data into training and testing sets.
 
+\- Training models.
 
+\- Generating predictions.
 
-\### Model Comparison
-
-
-
-| Model | Accuracy | ROC-AUC |
-
-|---|---:|---:|
-
-| Random Forest | 80.95% | 85.98% |
-
-| XGBoost | 86.50% | 86.59% |
-
-| LightGBM | 86.75% | 86.45% |
-
-
-
-\*These results are from the completed Bank Churn project.\*
+\- Evaluating model performance.
 
 
 
@@ -114,10 +76,6 @@ Developed a machine learning project to predict whether a bank customer is likel
 
 \- Scikit-learn
 
-\- XGBoost
-
-\- LightGBM
-
 \- Matplotlib
 
 \- Seaborn
@@ -126,21 +84,19 @@ Developed a machine learning project to predict whether a bank customer is likel
 
 \## Key Learning Outcomes
 
-\- Understood how tree-based algorithms work.
+\- Understood the difference between regression and classification.
 
-\- Learned the fundamentals of ensemble learning.
+\- Learned how to train and evaluate supervised learning models.
 
-\- Practiced feature engineering and categorical encoding.
+\- Developed an understanding of classification evaluation metrics.
 
-\- Compared different boosting algorithms.
+\- Learned why cross-validation and proper data splitting are important.
 
-\- Learned how to evaluate models using multiple metrics.
-
-\- Gained practical experience organizing machine learning code into reusable Python modules.
+\- Understood overfitting, underfitting, and the bias-variance trade-off.
 
 
 
 \## Weekly Summary
 
-Applied machine learning concepts to a real-world customer churn prediction problem. Gained practical experience with ensemble algorithms, feature engineering, model comparison, and structured ML project development.
+Developed a practical understanding of supervised machine learning and established the foundation for building, training, and evaluating predictive models.
 

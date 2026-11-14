@@ -1,64 +1,52 @@
-\# Week 04 – Unsupervised Machine Learning
+\# Week 03 – Tree-Based Models \& Feature Engineering
 
 
 
 \## Overview
 
-This week focused on unsupervised machine learning techniques, where models discover patterns, relationships, and structures in datasets without predefined target labels.
+This week focused on tree-based machine learning algorithms, feature engineering, model optimization, and building more structured machine learning pipelines.
 
 
 
-The main objective was to understand customer segmentation, dimensionality reduction, clustering evaluation, and anomaly detection.
+The objective was to improve model performance and understand how different algorithms handle real-world datasets.
 
 
 
 \## Topics Covered
 
-\- Introduction to Unsupervised Learning.
+\- Decision Tree algorithms.
 
-\- K-Means Clustering.
+\- Random Forest.
 
-\- Hierarchical Clustering.
+\- Ensemble Learning.
 
-\- DBSCAN.
+\- Gradient Boosting.
 
-\- Gaussian Mixture Models.
+\- XGBoost.
 
-\- Dimensionality Reduction.
+\- LightGBM.
 
-\- Principal Component Analysis (PCA).
+\- Feature Engineering.
 
-\- t-SNE and UMAP concepts.
+\- Categorical Feature Encoding.
 
-\- Silhouette Score and Cluster Evaluation.
+\- Feature Scaling.
 
-\- Anomaly Detection.
+\- Feature Selection.
 
-\- Isolation Forest.
+\- Scikit-learn Pipelines.
 
+\- Hyperparameter Tuning.
 
-
-\## Practical Project – Credit Card Customer Intelligence
-
-
-
-Developed an unsupervised machine learning project using the Kaggle Credit Card Dataset for Clustering.
+\- Model Comparison and Evaluation.
 
 
 
-Dataset: https://www.kaggle.com/datasets/arjunbhasin2013/ccdata
+\## Practical Project – Bank Customer Churn Prediction
 
 
 
-\### Project Objectives
-
-\- Identify groups of customers with similar credit-card usage patterns.
-
-\- Understand customer financial behavior.
-
-\- Compare different clustering algorithms.
-
-\- Identify unusual customer records using anomaly detection.
+Developed a machine learning project to predict whether a bank customer is likely to leave the bank.
 
 
 
@@ -66,35 +54,53 @@ Dataset: https://www.kaggle.com/datasets/arjunbhasin2013/ccdata
 
 1\. Dataset loading and inspection.
 
-2\. Data cleaning and missing-value handling.
+2\. Exploratory Data Analysis (EDA).
 
-3\. Feature engineering.
+3\. Data cleaning and preprocessing.
 
-4\. Exploratory Data Analysis.
+4\. Removing irrelevant columns.
 
-5\. Feature scaling using StandardScaler.
+5\. Encoding categorical variables.
 
-6\. Selecting the number of clusters using K-Means evaluation.
+6\. Splitting the dataset into training and testing sets.
 
-7\. Comparing clustering algorithms.
+7\. Training multiple classification algorithms.
 
-8\. Visualizing customer segments using PCA.
+8\. Comparing model performance.
 
-9\. Detecting unusual records using Isolation Forest.
+9\. Evaluating models using accuracy and ROC-AUC.
+
+10\. Analyzing feature importance.
 
 
 
-\### Algorithms Implemented
+\### Models Implemented
 
-\- K-Means
+\- Random Forest
 
-\- Agglomerative Clustering
+\- XGBoost
 
-\- Gaussian Mixture Model
+\- LightGBM
 
-\- DBSCAN
 
-\- Isolation Forest
+
+\### Model Comparison
+
+
+
+| Model | Accuracy | ROC-AUC |
+
+|---|---:|---:|
+
+| Random Forest | 80.95% | 85.98% |
+
+| XGBoost | 86.50% | 86.59% |
+
+| LightGBM | 86.75% | 86.45% |
+
+
+
+\*These results are from the completed Bank Churn project.\*
 
 
 
@@ -108,6 +114,10 @@ Dataset: https://www.kaggle.com/datasets/arjunbhasin2013/ccdata
 
 \- Scikit-learn
 
+\- XGBoost
+
+\- LightGBM
+
 \- Matplotlib
 
 \- Seaborn
@@ -116,23 +126,21 @@ Dataset: https://www.kaggle.com/datasets/arjunbhasin2013/ccdata
 
 \## Key Learning Outcomes
 
-\- Understood the difference between supervised and unsupervised learning.
+\- Understood how tree-based algorithms work.
 
-\- Learned how clustering algorithms group similar data points.
+\- Learned the fundamentals of ensemble learning.
 
-\- Understood how K-Means, Hierarchical Clustering, and DBSCAN work.
+\- Practiced feature engineering and categorical encoding.
 
-\- Learned the importance of feature scaling in distance-based algorithms.
+\- Compared different boosting algorithms.
 
-\- Practiced evaluating clustering results using Silhouette Score.
+\- Learned how to evaluate models using multiple metrics.
 
-\- Understood dimensionality reduction using PCA.
-
-\- Learned how Isolation Forest identifies potential anomalies.
+\- Gained practical experience organizing machine learning code into reusable Python modules.
 
 
 
 \## Weekly Summary
 
-Applied unsupervised learning techniques to a real-world credit-card customer dataset. Developed a customer segmentation and anomaly detection workflow and gained practical experience discovering patterns in unlabeled data.
+Applied machine learning concepts to a real-world customer churn prediction problem. Gained practical experience with ensemble algorithms, feature engineering, model comparison, and structured ML project development.
 
