@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Downloaded dataset
+data/*
+!data/.gitkeep
+
+# Trained model weights (large)
+models/*
+!models/.gitkeep
