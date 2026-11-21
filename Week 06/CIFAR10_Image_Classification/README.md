@@ -89,7 +89,40 @@ CIFAR10_Image_Classification/
 
 ## Results
 
-Results will be added here once training has finished.
+Measured on the 10,000 CIFAR-10 test images:
+
+| Model | Training images | Accuracy | Precision | Recall | F1 (macro) |
+|---|---:|---:|---:|---:|---:|
+| `scratch_cnn_full` | 45,000 | 75.30% | 75.85% | 75.30% | 75.09% |
+| `scratch_cnn_subset` | 5,000 | 60.37% | 64.86% | 60.37% | 61.25% |
+| `resnet18_finetuned` | 5,000 | **84.12%** | 84.38% | 84.12% | 84.10% |
+
+- **Data matters:** the same CNN drops from 75.3% to 60.4% with 9 times fewer training images.
+- **Pretraining matters more:** with the same 5,000 images, the pretrained ResNet-18 scores 84.1%, beating even the from-scratch CNN trained on all 45,000.
+- **Training curves:** the from-scratch CNN was still improving after 8 epochs. The ResNet-18 jumped from 74% to 84% validation accuracy when fine-tuning began, then started to overfit (97% training vs 85% validation accuracy).
+
+### Per-class accuracy
+
+| Class | Scratch, full | Scratch, subset | ResNet-18 |
+|---|---:|---:|---:|
+| airplane | 86.7% | 65.5% | 87.2% |
+| automobile | 90.2% | 71.7% | 89.7% |
+| bird | 67.3% | 62.0% | 71.4% |
+| cat | 51.6% | 61.9% | 74.2% |
+| deer | 66.5% | 39.2% | 86.0% |
+| dog | 62.5% | 42.7% | 77.4% |
+| frog | 83.5% | 64.9% | 90.7% |
+| horse | 85.6% | 69.0% | 84.9% |
+| ship | 82.4% | 65.0% | 90.0% |
+| truck | 76.7% | 61.8% | 89.7% |
+
+Vehicles are easier than animals. The ResNet-18's most common mistakes are dog → cat (139 images) and cat → dog (102).
+
+![Training curves, ResNet-18](outputs/training_curves_resnet18_finetuned.png)
+
+![Grad-CAM heatmaps](outputs/grad_cam.png)
+
+In the Grad-CAM sample (the first test image of 8 classes), airplane, dog, frog and horse are correct, with the heatmap on the object; the 4 mistakes all have confidence close to 50%.
 
 ## Outputs
 

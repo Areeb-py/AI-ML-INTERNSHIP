@@ -33,30 +33,31 @@ Each idea was first implemented from scratch in NumPy or as a small PyTorch scri
 | `transfer_learning.py` | A frozen pretrained ResNet-18 with a new final layer trained on digits. |
 | `grad_cam.py` | Grad-CAM implemented with hooks on a small digit CNN. |
 
-## Practical Project – Ants vs Bees Image Classification
+## Practical Project – CIFAR-10 Image Classification
 
-Built an image classifier on the Hymenoptera (ants vs bees) dataset in two ways and compared them. See `Ants_Bees_Classification/README.md` for setup and run order.
+Built an image classifier for CIFAR-10 (60,000 colour images, 32x32 pixels, 10 classes) in two ways and compared them on the 10,000 test images: a CNN trained from scratch and a fine-tuned pretrained ResNet-18. See `CIFAR10_Image_Classification/README.md` for setup and run order.
 
-Dataset: https://download.pytorch.org/tutorial/hymenoptera_data.zip
+Dataset: https://www.cs.toronto.edu/~kriz/cifar.html
 
 ### Project Workflow
 
-1. Downloading and organising the dataset.
-2. Data augmentation and preprocessing.
-3. Building and training a CNN from scratch.
-4. Loading a pretrained ResNet-18 and training a new final layer.
+1. Downloading CIFAR-10 and splitting it into 45,000 train, 5,000 validation and 10,000 test images.
+2. Data augmentation (random shifts and flips) and normalisation.
+3. Training a CNN from scratch on all 45,000 training images, and again on a 5,000-image subset.
+4. Loading a pretrained ResNet-18 and training a new final layer on the same 5,000 images.
 5. Fine-tuning the last residual stage with a smaller learning rate.
-6. Comparing both models on the validation set.
+6. Comparing all models on the test set, including per-class accuracy and confusion matrices.
 7. Explaining predictions with Grad-CAM.
 
 ### Model Comparison
 
-| Model | Accuracy | F1 (macro) |
-|---|---:|---:|
-| CNN from scratch | 72.55% | 70.43% |
-| ResNet-18 fine-tuned | 94.77% | 94.72% |
+| Model | Training images | Test accuracy | F1 (macro) |
+|---|---:|---:|---:|
+| CNN from scratch | 45,000 | 75.30% | 75.09% |
+| CNN from scratch | 5,000 | 60.37% | 61.25% |
+| ResNet-18 pretrained + fine-tuned | 5,000 | 84.12% | 84.10% |
 
-*These results are from the completed Ants vs Bees project, measured on 153 validation photos.*
+*Measured on the 10,000 CIFAR-10 test images. With the same 5,000 training images, pretraining adds about 24 percentage points; it even beats the from-scratch CNN trained on 9 times more data.*
 
 ## Tools & Libraries
 
@@ -76,9 +77,10 @@ Dataset: https://download.pytorch.org/tutorial/hymenoptera_data.zip
 - Practiced training a CNN with a full PyTorch training loop.
 - Learned how data augmentation adds variety without new data.
 - Understood the difference between feature extraction and fine-tuning.
-- Saw that transfer learning clearly outperforms training from scratch on a small dataset.
+- Saw that transfer learning clearly outperforms training from scratch when labelled data is limited.
+- Learned to read training curves, per-class accuracy and confusion matrices (cats and dogs are the hardest classes).
 - Learned how Grad-CAM shows which image regions drive a prediction.
 
 ## Weekly Summary
 
-Built convolutional neural networks from the ground up, from a hand-written convolution to the classic architectures, and applied them to a real image dataset. A fine-tuned pretrained ResNet-18 reached about 95% accuracy on ants vs bees where a CNN trained from scratch reached about 73%, and Grad-CAM was used to check what the model was looking at.
+Built convolutional neural networks from the ground up, from a hand-written convolution to the classic architectures, and applied them to CIFAR-10. A CNN trained from scratch reached 75.3% test accuracy, while a pretrained ResNet-18 fine-tuned on only 5,000 images reached 84.1%, and Grad-CAM was used to check what the model was looking at.
